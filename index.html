@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta description="Mi Primera Web, Mundo Gaming" />
+    <link rel="shortcut icon" href="../src/icon.png" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <title>Mundo Gaming</title>
+    <script language="JavaScript">
+      function Fecha() {
+        meses = new Array(
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre"
+        );
+        data = new Date();
+        index = data.getMonth();
+        diasemana = new Array(
+          "Lunes",
+          "Martes",
+          "Miércoles",
+          "Jueves",
+          "Viernes",
+          "Sábado",
+          "Domingo"
+        );
+        indexday = data.getDay();
+        if (indexday == 0) indexday = 7;
+        any = data.getYear();
+        if (any < 1900) any = 1900 + any;
+        document.write(
+          '<p style="color:red">' +
+            diasemana[indexday - 1] +
+            "," +
+            " " +
+            data.getDate() +
+            " de " +
+            meses[index] +
+            " de " +
+            any,
+          "</p>"
+        );
+      }
+    </script>
+    <script type="text/javascript">
+      function actual() {
+        fecha = new Date(); //Actualizar fecha.
+        hora = fecha.getHours(); //hora actual
+        minuto = fecha.getMinutes(); //minuto actual
+        segundo = fecha.getSeconds(); //segundo actual
+        if (hora < 10) {
+          //dos cifras para la hora
+          hora = "0" + hora;
+        }
+        if (minuto < 10) {
+          //dos cifras para el minuto
+          minuto = "0" + minuto;
+        }
+        if (segundo < 10) {
+          //dos cifras para el segundo
+          segundo = "0" + segundo;
+        }
+        //ver en el recuadro del reloj:
+        mireloj = hora + " : " + minuto + " : " + segundo;
+        return mireloj;
+      }
+      function actualizar() {
+        //funcionamiento del temporizador
+        mihora = actual(); //recoger hora actual
+        mireloj = document.getElementById("reloj"); //buscar elemento reloj
+        mireloj.innerHTML = mihora; //incluir hora en elemento
+      }
+      setInterval(actualizar, 1000); //iniciar temporizador
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="reloj" class="Reloj">00 : 00 : 00</div>
+      <div class="Fecha">
+        <script>
+          Fecha();
+        </script>
+      </div>
+      <div class="estit">
+        <h1><a class="tit nd" href="../index.html">MUNDO GAMING</a></h1>
+      </div>
+    </header>
+    <nav>
+      <div>
+        <hr />
+        <ul class="menu">
+          <li style="float: left">
+            <a class="box nd" href="../html/pc.html">PC</a>
+          </li>
+          <li style="float: left">
+            <span class="separador">| </span
+            ><a class="box nd" href="../html/ps2.html">PS2</a>
+          </li>
+          <li style="float: left">
+            <span class="separador">| </span
+            ><a class="box nd" href="../html/ps3.html">PS3</a>
+          </li>
+          <li style="float: left">
+            <span class="separador">| </span
+            ><a class="box nd" href="../html/xbox360.html">XBOX360</a>
+          </li>
+          <li style="float: left">
+            <span class="separador">| </span
+            ><a class="box nd" href="../html/android.html">ANDROID</a>
+          </li>
+          &nbsp;
+        </ul>
+        <hr />
+      </div>
+    </nav>
+    <main>
+      <section>
+        <article>
+          <div class="presentacion">
+            <h1>
+              Bienvenidos a <span style="color: magenta">MUNDO GAMING</span>,
+              Aqui encontraras links directos para la descarga de juegos.
+            </h1>
+          </div>
+          <!-- Articulo 1 -->
+          <div class="p">
+            <p class="p" style="color: goldenrod">TITULO</p>
+            <!--Articulo a la derecha-->
+            <span class="p2" style="color: goldenrod">TITULO</span>
+          </div>
+          <div>&nbsp;</div>
+          <div>
+            <img class="img" src="../src/pro.jpg" />
+            <img class="img2" src="../src/pro.jpg" />
+          </div>
+          <p class="resumen">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            maiores quas ut. Exercitationem quos ea fugit, beatae pariatur esse
+            rerum laudantium debitis id, quisquam sint possimus obcaecati
+            suscipit, modi cum?
+          </p>
+          <!--Articulo a la derecha-->
+          <p class="resumen2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+            impedit veritatis numquam cum nobis soluta. Tenetur, ducimus error
+            fugiat, corrupti, assumenda nihil ratione aperiam cum minus maxime
+            beatae et officia!
+          </p>
+          <p>
+            <a class="nd center" style="color: white" href="#">DESCARGAR</a>
+            <!--Articulo a la derecha-->
+            <a class="nd download" style="color: white" href="#">DESCARGAR</a>
+          </p>
+          <div>&nbsp;</div>
+        </article>
+      </section>
+    </main>
+    <aside></aside>
+    <footer>
+      <div class="credits">
+        <h6 class="credits" style="color: red">ROLLING</h6>
+        <h6 class="credits" style="color: white">CODE</h6>
+        <span class="credits2" style="color: red"
+          >DESARROLLADA POR
+          <a
+            class="nd"
+            style="color: white"
+            href="http://www.facebook.com/AngelOlletaOk"
+            >ANGEL OLLETA</a
+          ></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
